@@ -1,0 +1,88 @@
+.step {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  padding: 36px;
+}
+
+.addon-list {
+  display: grid;
+  gap: 16px;
+}
+
+.addon-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.addon-card:hover {
+  border-color: #2563eb;
+}
+
+.addon-card.selected {
+  border-color: #2563eb;
+  background: #f0f4ff;
+}
+
+.addon-checkbox {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.addon-checkbox svg {
+  width: 12px;
+  height: 10px;
+}
+
+.addon-checkbox.checked {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.addon-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.addon-name {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+.addon-description {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.addon-price {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}

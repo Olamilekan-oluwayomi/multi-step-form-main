@@ -1,0 +1,149 @@
+.step {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  padding: 36px;
+}
+
+.plan-list {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.plan-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.plan-card:hover {
+  border-color: #2563eb;
+}
+
+.plan-card.selected {
+  border-color: #2563eb;
+  background: #f0f4ff;
+}
+
+.plan-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-name {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.plan-price {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.plan-discount {
+  visibility: hidden;
+  font-size: 0.8rem;
+  color: #0f172a;
+}
+
+.plan-discount.visible {
+  visibility: visible;
+}
+
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.billing-toggle span {
+  font-weight: 600;
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.billing-toggle span.active {
+  color: #0f172a;
+}
+
+.toggle-switch {
+  width: 48px;
+  height: 24px;
+  border-radius: 999px;
+  background: #0f172a;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggle-switch.on .toggle-knob {
+  left: 27px;
+}
+
+@media (min-width: 641px) {
+  .plan-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .plan-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 170px;
+    justify-content: space-between;
+  }
+
+  .plan-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .plan-details {
+    gap: 6px;
+  }
+
+  .plan-name {
+    font-size: 1.05rem;
+  }
+
+  .billing-toggle {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
